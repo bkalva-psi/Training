@@ -1,5 +1,5 @@
-.main-wrapper{
-    margin-top: 70px;
+.container-fluid{
+    margin-top: 50px;
 }
 .left-section{
     width: 100px;
@@ -9,4 +9,10 @@
 }
 .right-section{
     width: 100px;
+}
+body{
+    padding-top: 56px;
+}
+*{
+    border: 1px solid red;
 }
