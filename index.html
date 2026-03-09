@@ -5,22 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yt Clone</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
     <header>
-       <nav class="navbar bg-white fixed-top shadow-sm">
+       <nav class="navbar navbar-light bg-white fixed-top shadow-sm">
         <div class="container-fluid">
             <div class="d-flex w-100 align-items-center">
                 <div class="d-flex align-items-center gap-3">   
                     <!-- gap-means margin-->
-                    <img src="images/hamburger-menu.svg" alt="Hamburger Menu" class="nav-icon" height="24">
+                     <button class="navbar-toggler" 
+                    data-bs-target="#sidebar"
+                    data-bs-toggle="offcanvas"
+                    aria-controls="sidebar">
+                    <span class="navbar-toggler-icon"></span>
+                    
+                </button>
                     <img src="images/youtube-logo.svg" alt="Youtube Logo" class="nav-icon" height="24">
                 </div>
                 <div class="flex-grow-1 d-flex justify-content-center mx-4">
                     <div class="input-group" style="max-width: 600px;">
                         <input class="form-control">
-                        <button class="btn btn-outline-secondary rounded-pill-end">
+                        <button class="btn btn-outline-secondary rounded-pill">
                             <img src="images/Search.png" alt="Search" class="nav-icon" height="24">
                         </button>
                     </div>
@@ -35,9 +42,55 @@
     </header>
     <div class="container-fluid">
         <div class="row">
-        <aside class="col-12 col-md-3 col-lg-2 bg-light">
-            this is a sidebar 
-        </aside>
+
+            <aside class="col-md-3 col-lg-2 offcanvas offcanvas-start" id="sidebar"    
+           >
+
+                <div class="offcanvas-header">
+                    <h5>Menu</h5>
+                    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+              
+                <div class="offcanvas-body">
+                    <div class="d-flex flex-column gap-3 p-2">
+                        <a class="d-flex align-items-center gap-3 p-2 text-decoration-none text-dark">
+                            <img src="images/home-icon.png" height="20">
+                            <span>Home</span>
+                        </a>
+                        <a class="d-flex align-items-center gap-3 p-2 text-decoration-none text-dark">
+                            <img src="images/youtube-shorts.jpg"  height="20">
+                            <span>Shorts</span>
+                        </a>
+                        <a class="d-flex align-items-center gap-3 p-2 text-decoration-none text-dark">
+                            <img src="images/subs.png" height="20">
+                            <span>Subscriptions</span>
+                        <hr>
+                        <a class="d-flex align-items-center gap-3 p-2 text-decoration-none text-dark">
+                            <img src="images/history.png" height="20">
+                            <span>History</span>
+                        </a>
+                        <a class="d-flex align-items-center gap-3 p-2 text-decoration-none text-dark">
+                            <img src="images/playlists.png" height="20">
+                            <span>Playlists</span>
+                        </a>
+                        <a class="d-flex align-items-center gap-3 p-2 text-decoration-none text-dark">
+                            <img src="images/watchlater.png" height="20">
+                            <span>Watch Later</span>
+                        </a>
+                        <a class="d-flex align-items-center gap-3 p-2 text-decoration-none text-dark">
+                            <img src="images/Liked.jpg" height="20">
+                            <span>Liked Videos</span>
+                        </a>
+                        <a class="d-flex align-items-center gap-3 p-2 text-decoration-none text-dark">
+                            <img src="images/downloads-1.webp.jpg" height="20">
+                            <span>Downloads</span>
+                        </a>
+                        <hr>
+                    </div>
+                </div>
+              
+              </aside>
+
         <main class="col-12 col-md-9 col-lg-10">
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-4 ">
