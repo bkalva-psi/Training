@@ -15,12 +15,14 @@
             <div class="d-flex w-100 align-items-center">
                 <div class="d-flex align-items-center gap-3">   
                     <!-- gap-means margin-->
-                     <button class="navbar-toggler" 
-                    data-bs-target="#sidebar"
-                    data-bs-toggle="offcanvas"
-                    aria-controls="sidebar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                     <!-- toggle button which opens the sidebar when clicked -->
+                     <button class="navbar-toggler border-0 shadow-none p-1" 
+                     data-bs-target="#sidebar"
+                     data-bs-toggle="offcanvas"
+                     aria-controls="sidebar">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+                   
                     <img src="images/youtube-logo.svg" alt="Youtube Logo" class="nav-icon" height="24">
                 </div>
                 <div class="flex-grow-1 d-flex justify-content-center mx-4">
@@ -41,21 +43,19 @@
     </header>
     <div class="container-fluid">
         <div class="row">
-
             <aside class=" offcanvas offcanvas-start" id="sidebar">
-
                 <div class="offcanvas-header d-flex align-items-center gap-3">
-                    <button class="navbar-toggler" 
+                    <button class="navbar-toggler border-0 shadow-none p-1" 
                     data-bs-dismiss="offcanvas"
                     aria-controls="sidebar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <img src="images/youtube-logo.svg" alt="Youtube Logo" class="nav-icon" height="24">
                 
+                <img src="images/youtube-logo.svg" alt="Youtube Logo" class="nav-icon" height="24">
                 </div>       
                 
-              
                 <div class="offcanvas-body overflow-auto">
+
                     <div class="d-flex flex-column gap-3 p-2">
                         <a class="d-flex align-items-center gap-3 p-2 text-decoration-none text-dark">
                             <img src="images/home-icon.png" height="20">
@@ -116,6 +116,8 @@
                 </div>
               
               </aside>
+
+              <!-- collapsed sidebar -->
 <div class="col-auto d-flex flex-column align-items-center vh-100 px-2" style="width:80px;">
     <div class="d-flex flex-column align-items-center gap-2">
     
@@ -137,7 +139,7 @@
       </div>
     </div>
 </div>
-        <main class="col px-3">
+        <main class="col px-3 overflow-hidden">
                 <!-- Categories-->
                 <div class="d-flex overflow-x-auto py-1 px-3 gap-2 mt-2">
               
@@ -165,7 +167,7 @@
                     <div class="video-card">
                         <div class="ratio ratio-16x9 thumbnail-container">
                             <img src="https://picsum.photos/1280/720"
-                                 class="w-100 h-100 object-fit-cover">
+                                 class="w-100 h-100 rounded-3 object-fit-cover">
                         </div>
                     
                         <div class="d-flex mt-2 gap-2">
@@ -199,7 +201,43 @@
                     <div class="video-card">
                         <div class="ratio ratio-16x9 thumbnail-container">
                             <img src="https://picsum.photos/1280/720"
-                                 class="w-100 h-100 object-fit-cover object-fit-cover">
+                                 class="w-100 h-100 rounded-3 object-fit-cover">
+                        </div>
+                    
+                        <div class="d-flex mt-2 gap-2">
+                    
+                            <img src="https://picsum.photos/36"
+                                 class="rounded-circle"
+                                 width="36"
+                                 height="36">
+                    
+                            <div>
+                                
+                                <div class="fw-semibold video-title">
+                                    Try Not To Laugh Challenge #9 - The Most Hilarious Compilation 
+                                    Ever Made In The History Of YouTube By Markiplier Featuring All 
+                                    His Friends And Special Guests
+                                </div>
+                    
+                                <div class="text-muted small">
+                                    Markiplier
+                                </div>
+                    
+                                <div class="text-muted small">
+                                    1M views &#46; 2 days ago
+                                </div>
+                    
+                            </div>
+                    
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 ">
+                    <div class="video-card">
+                        <div class="ratio ratio-16x9 thumbnail-container">
+                            <img src="https://picsum.photos/1280/720"
+                                 class="w-100 h-100 rounded-3 object-fit-cover">
                         </div>
                     
                         <div class="d-flex mt-2 gap-2">
@@ -233,7 +271,7 @@
                     <div class="video-card">
                         <div class="ratio ratio-16x9 thumbnail-container">
                             <img src="https://picsum.photos/1280/720"
-                                 class="w-100 h-100 object-fit-cover object-fit-cover">
+                                 class="w-100 h-100 rounded-3 object-fit-cover">
                         </div>
                     
                         <div class="d-flex mt-2 gap-2">
@@ -267,7 +305,7 @@
                     <div class="video-card">
                         <div class="ratio ratio-16x9 thumbnail-container">
                             <img src="https://picsum.photos/1280/720"
-                                 class="w-100 h-100 object-fit-cover object-fit-cover">
+                                 class="w-100 h-100 rounded-3 object-fit-cover">
                         </div>
                     
                         <div class="d-flex mt-2 gap-2">
@@ -301,41 +339,7 @@
                     <div class="video-card">
                         <div class="ratio ratio-16x9 thumbnail-container">
                             <img src="https://picsum.photos/1280/720"
-                                 class="w-100 h-100 object-fit-cover object-fit-cover">
-                        </div>
-                    
-                        <div class="d-flex mt-2 gap-2">
-                    
-                            <img src="https://picsum.photos/36"
-                                 class="rounded-circle"
-                                 width="36"
-                                 height="36">
-                    
-                            <div>
-                    
-                                <div class="fw-semibold">
-                                    Try Not To Laugh Challenge #9
-                                </div>
-                    
-                                <div class="text-muted small">
-                                    Markiplier
-                                </div>
-                    
-                                <div class="text-muted small">
-                                    1M views &#46; 2 days ago
-                                </div>
-                    
-                            </div>
-                    
-                        </div>
-                    
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 ">
-                    <div class="video-card">
-                        <div class="ratio ratio-16x9 thumbnail-container">
-                            <img src="https://picsum.photos/1280/720"
-                                 class="w-100 h-100 object-fit-cover object-fit-cover">
+                                 class="w-100 h-100 rounded-3 object-fit-cover">
                         </div>
                     
                         <div class="d-flex mt-2 gap-2">
