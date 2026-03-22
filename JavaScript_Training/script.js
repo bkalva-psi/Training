@@ -47,3 +47,4 @@ clearButton.addEventListener("click",function(){
     num2.value="";
     document.getElementById("result").innerHTML="";
 });
+
