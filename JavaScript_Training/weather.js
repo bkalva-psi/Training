@@ -35,3 +35,18 @@ displaySearchHistory();
         const searchHistoryDOM=document.getElementById('searchHistory');
         searchHistoryDOM.innerHTML=`<p>Search History: ${searchHistory.join(', ')}</p>`;
     }
+
+    var Loggedin='true';
+LoggedinButton.addEventListener('click',()=>{
+    Loggedin==='true'?LoggedinButton.innerHTML='Logout':LoggedinButton.innerHTML='Log in now!';
+}
+);
+// const priceArray=[100,200,300,400,5];
+// const FiltererdPriceArray=priceArray.filter(p=>p>50).map(p=>`$`+ `${p}`);
+// console.log(FiltererdPriceArray);
+
+// Cords.addEventListener('mousemove',(e)=>{
+//   const x=e.clientX;
+//   const y=e.clientY;
+//   Cords.value=x + ',' + y;
+// });
