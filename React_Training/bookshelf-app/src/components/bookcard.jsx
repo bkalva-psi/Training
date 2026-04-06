@@ -1,14 +1,25 @@
-function BookCard() {
+export default function BookCard ({id, title='Definetly a good book Title',author='Yet To be Decided',status='To-Read',onSelect,pages, rating=0}) {
+    
+    const handleClick=(id)=>{
+        console.log('you clicked on:'+id);
+    };
     return (
+
         <div style={styles.card}>
             
 
             <div style={styles.content}>
-                <h2 style={styles.title}>As a man Thinketh</h2>
-                <p style={styles.author}>James Allen</p>
+                <h2 style={styles.title}>{title}</h2>
+                <p style={styles.author}>Book Id:{id}</p>
+                <p style={styles.author}>{author}</p>
+                <p style={styles.author}>No of Pages:{pages}</p>
+                <p style={styles.author}>Rated as:{rating}</p>
+                <button onClick={()=>onSelect(id)}>
+                    Press me!
+                </button>
             </div>
             <div style={styles.header}>
-                <span style={styles.badge}>Reading</span>
+                <span style={styles.badge}>{status}</span>
             </div>
         </div>
     )
@@ -64,4 +75,3 @@ const styles = {
     }
 }
 
-export default BookCard

@@ -1,15 +1,22 @@
-import BookCard1 from "./bookcard-1"
-import BookCard2 from "./bookcard-2"
-import BookCard3 from "./bookcard-3"
+import BookCard from "./bookcard"
+import {BookData} from "../Data"
 
-const BookList=()=>{
-    return(
-        <>
-        <BookCard1/>
-        <BookCard2/>
-        <BookCard3/>
+const BookList=(handleSelectBook)=>{
 
-        </>
-    )
+        const BooksData=BookData.map((book)=> 
+        {
+            return (
+            <BookCard {...book}
+            onSelect={handleSelectBook}
+        />
+            );
+        });
+
+        return(
+            <>
+            {BooksData}</>
+        )
+        
+    
 }
 export default BookList
