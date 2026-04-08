@@ -1,4 +1,4 @@
-export default function BookCard ({id, title='Definetly a good book Title',author='Yet To be Decided',status='To-Read',onSelect,pages, rating=0}) {
+export default function BookCard ({id, onToggle ,onDelete, title='Definetly a good book Title',author='Yet To be Decided',status='Not Read',onSelect,pages, rating=0}) {
     
     const handleClick=(id)=>{
         console.log('you clicked on:'+id);
@@ -14,8 +14,14 @@ export default function BookCard ({id, title='Definetly a good book Title',autho
                 <p style={styles.author}>{author}</p>
                 <p style={styles.author}>No of Pages:{pages}</p>
                 <p style={styles.author}>Rated as:{rating}</p>
-                <button onClick={()=>onSelect(id)}>
+                <button style={styles.badge} onClick={()=>onSelect(id)}>
                     Press me!
+                </button>
+                <button style={styles.badge}  onClick={()=>onDelete(id)}>
+                    Delete me!
+                </button>
+                <button style={styles.badge} onClick={()=>onToggle(id)}>
+                    Toggle Status
                 </button>
             </div>
             <div style={styles.header}>

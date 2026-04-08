@@ -1,13 +1,17 @@
 import BookCard from "./bookcard"
-import {BookData} from "../Data"
+// import {BookData} from "../Data"
 
-const BookList=(handleSelectBook)=>{
+const BookList=({books, onSelect, onDelete,onToggle})=>{
 
-        const BooksData=BookData.map((book)=> 
+        const BooksData=books.map((book)=> 
         {
             return (
-            <BookCard {...book}
-            onSelect={handleSelectBook}
+            <BookCard
+            key={book.id} 
+            {...book}
+            onSelect={onSelect}
+            onDelete={onDelete}
+            onToggle={onToggle}
         />
             );
         });
