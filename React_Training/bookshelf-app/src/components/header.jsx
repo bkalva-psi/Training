@@ -1,9 +1,14 @@
 import AppLogo from '../assets/Logo.png'
-function Header({ onAddBook }) {
+function Header({ onAddBook ,bookcount}) {
     return (
         <header style={styles.header}>
-            <img src={AppLogo} alt="logo" style={styles.logo}/>
-            <h1 style={styles.title}>The Bookshelf</h1>
+            <img src={AppLogo} alt="logo" style={styles.logo}/><div style={styles.titleContainer}>
+  <h1 style={styles.title}>The Bookshelf</h1>
+
+  <p style={styles.countText}>
+    <span style={styles.countNumber}>{bookcount}</span> books in the shelf
+  </p>
+</div>
 
             <button style={styles.button} onClick={onAddBook}>
                 Add Book
@@ -51,7 +56,28 @@ const styles = {
         fontWeight: "500",
         cursor: "pointer",
         boxShadow: "0 4px 10px rgba(0,0,0,0.1)"
-    }
+    },
+    titleContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center"
+},
+
+countText: {
+    margin: "4px 0 0",
+    fontSize: "16px",
+    color: "#888",
+    fontWeight: "500",
+    letterSpacing: "0.3px"
+},
+
+countNumber: {
+    fontSize: "16px",
+    fontWeight: "700",
+    color: "#4facfe",
+    marginRight: "4px"
+}
 };
 
 export default Header;
