@@ -109,3 +109,10 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+:root {
+  --primary: #4facfe;
+  --secondary: #00f2fe;
+  --completed: green;
+  --reading: blue;
+  --toread: gray;
+}
